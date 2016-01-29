@@ -3,45 +3,13 @@
  *
  * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
  */
-@font-face {
-    font-family: 'metanormal_roman';
-    src: url('../../fonts/meta_normal_roman-webfont.eot');
-    src: url('../../fonts/meta_normal_roman-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../../fonts/meta_normal_roman-webfont.woff') format('woff'),
-         url('../../fonts/meta_normal_roman-webfont.ttf') format('truetype'),
-         url('../../fonts/meta_normal_roman-webfont.svg#metanormal_roman') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'metabold_roman';
-    src: url('../../fonts/meta_bold-webfont.eot');
-    src: url('../../fonts/meta_bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../../fonts/meta_bold-webfont.woff') format('woff'),
-         url('../../fonts/meta_bold-webfont.ttf') format('truetype'),
-         url('../../fonts/meta_bold-webfont.svg#metablack_roman') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'metablack_roman';
-    src: url('../../fonts/meta_black_lf_roman-webfont.eot');
-    src: url('../../fonts/meta_black_lf_roman-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../../fonts/meta_black_lf_roman-webfont.woff') format('woff'),
-         url('../../fonts/meta_black_lf_roman-webfont.ttf') format('truetype'),
-         url('../../fonts/meta_black_lf_roman-webfont.svg#metablack_roman') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
 
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 body:after {
   position:absolute;
-  top:0;
+  top:10px;
   right:10px;
   width:153px;
   height:41px;
@@ -50,12 +18,14 @@ body:after {
 }
 
 .reveal {
-  font-family: "metanormal_roman";
-  background: #c33932 url(../../img/background.png) no-repeat center center;
-  background-size: contain;
+  font-family: "Fira Sans";
+  background: #0c99d5 url(../../img/background.png) no-repeat center center;
+  background-size: 100% auto;
   font-size: 36px;
   font-weight: normal;
-  color: #FFF; }
+  color: #FFF;
+  border-top: 10px solid #fff;
+}
 
 ::selection {
   color: white;
@@ -73,7 +43,8 @@ body:after {
 .reveal h6 {
   margin: 0 0 10px 0;
   color: #FFF;
-  font-family: "metablack_roman";
+  font-family: "Fira Sans";
+  font-weight: 900;
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
 
 .reveal h1 {
@@ -212,4 +183,41 @@ body:after {
 .reveal .author {
   text-align: right;
   font-style: italic;
+}
+
+.reveal .hashtag-moz {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 9999;
+}
+
+.reveal .hashtag-moz p {
+  font-weight: 100;
+  font-style: italic;
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+.reveal .campus {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  width: 200px;
+}
+
+.reveal .campus img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.reveal img.emoji {
+  margin: 0;
+  width: 1.2em;
+  height: 1.2em;
+  display: inline-block;
+  margin: 0em;
+  vertical-align: -.2em;
 }
